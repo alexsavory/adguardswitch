@@ -1,0 +1,38 @@
+{
+    "pluginAlias": "homebridge-adguard-dns-switch",
+    "pluginType": "accessory",
+    "singular": true,
+    "headerDisplay": "This plugin requires a DNS server configured at adguard-dns.io and does not support local AdGuard Home. <br>Multi-Factor or Password less profiles are not support.",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "dnsServerId": {
+          "title": "dnsServerId",
+          "type": "string",
+          "description": "You can locate this within the URL of your AdGuard Dashboard",
+          "required": true
+        },
+        "username": {
+            "title": "username",
+            "type": "string",
+            "description": "Your AdGuard Account username",
+            "required": true
+          },
+          "password": {
+            "title": "password",
+            "type": "string",
+            "description": "Your AdGuard Account Password",
+            "required": true
+          },
+          "debug": {
+            "title": "Debug",
+            "type": "boolean",
+            "description": "Enable Debug Messages",
+            "default": false,
+            "required": true
+          }
+      }
+    },
+    "form": null,
+    "display": null
+  }

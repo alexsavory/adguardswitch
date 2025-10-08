@@ -1,0 +1,24 @@
+{
+    "name": "homebridge-adguard-dns-switch",
+    "displayName": "Adguard DNS Server Protection Toggle",
+    "version": "1.0.8",
+    "description": "Homebridge plugin to toggle adblocking at AdGuard Hosted DNS (adguard-dns.io)",
+    "main": "index.js",
+    "author": "trurascalz <trurascalz@gmail.com>",
+    "license": "MIT",
+    "keywords": [
+      "homebridge-plugin",
+      "homebridge",
+      "adguard",
+      "dns",
+      "switch"
+    ],
+    "engines": {
+      "homebridge": ">=1.3.0",
+      "node": ">=14.0.0"
+    },
+    "dependencies": {
+      "axios": "^1.4.0"
+    }
+  }
+  
