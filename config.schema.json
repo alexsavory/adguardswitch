@@ -1,38 +1,45 @@
 {
-    "pluginAlias": "homebridge-adguard-dns-switch",
-    "pluginType": "accessory",
-    "singular": true,
-    "headerDisplay": "This plugin requires a DNS server configured at adguard-dns.io and does not support local AdGuard Home. <br>Multi-Factor or Password less profiles are not support.",
-    "schema": {
-      "type": "object",
-      "properties": {
-        "dnsServerId": {
-          "title": "dnsServerId",
-          "type": "string",
-          "description": "You can locate this within the URL of your AdGuard Dashboard",
-          "required": true
-        },
-        "username": {
-            "title": "username",
-            "type": "string",
-            "description": "Your AdGuard Account username",
-            "required": true
-          },
-          "password": {
-            "title": "password",
-            "type": "string",
-            "description": "Your AdGuard Account Password",
-            "required": true
-          },
-          "debug": {
-            "title": "Debug",
-            "type": "boolean",
-            "description": "Enable Debug Messages",
-            "default": false,
-            "required": true
-          }
+  "pluginAlias": "AdGuardDNSSwitch",
+  "pluginType": "accessory",
+  "singular": true,
+  "headerDisplay": "This plugin requires a DNS server configured at <a href='https://adguard-dns.io'>https://adguard-dns.io</a> and does not support local AdGuard Home. <br>Multi-Factor or Passwordless profiles are not supported.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "description": "The name of your switch in the Home app.",
+        "default": "AdGuard DNS Protection",
+        "required": true
+      },
+      "dnsServerId": {
+        "title": "dnsServerId",
+        "type": "string",
+        "description": "You can locate this within the URL of your AdGuard Dashboard",
+        "required": true
+      },
+      "username": {
+        "title": "Username",
+        "type": "string",
+        "description": "Your AdGuard Account username",
+        "required": true
+      },
+      "password": {
+        "title": "Password",
+        "type": "string",
+        "format": "password",
+        "description": "Your AdGuard Account Password",
+        "required": true
+      },
+      "debug": {
+        "title": "Debug",
+        "type": "boolean",
+        "description": "Enable Debug Messages",
+        "default": false
       }
-    },
-    "form": null,
-    "display": null
-  }
+    }
+  },
+  "form": null,
+  "display": null
+}
